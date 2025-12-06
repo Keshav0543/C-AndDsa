@@ -7,12 +7,12 @@ int main(){
     //using binary search concept...
     int mid=(left+right)/2;
     while(left<=right){
-        if(nums[mid]>nums[mid-1] && nums[mid]>nums[mid+1])break;
+        if(mid!=0 && nums[mid]>nums[mid-1] && nums[mid]>nums[mid+1])break;
         else if(nums[mid]< nums[mid+1]){
             left=mid+1;
             mid=(left+right)/2;
         }
-        else if(nums[mid]<nums[mid-1]){
+        else {
             right=mid-1;
             mid=(left+right)/2;
         }
